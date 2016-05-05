@@ -1,16 +1,74 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+ <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Import Google Icon Font-->
+      <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700italic' rel='stylesheet' type='text/css'>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/blog.css">
+      <link rel="icon" href="data:;base64,iVBORwOKGgo=">
+
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
+
     <body>
-        <div>TODO write content</div>
+        <header>
+            <nav>
+                <div class="new-wrapper">
+                    <a href="#"  class="ahmi">Todo List</a>
+                    <ul class="right">
+                        <li><a href="index.html" id="a">Home</a></li>
+                        <li><a href="admin.html" id="p">Admin</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="container">
+                <div class="row">
+                    <h1 class="center-align" id="o">My Todo List</h1>
+                </div>
+                <div class="row">
+                    <div class="col s12 main-container">
+                        
+                    </div>  
+                </div>
+            </div>
+        </main>
+         <footer>
+            <div class="container">
+                <p><a href="#" id="m">Back to the top</a></p>
+                <p id="x"> @2016 Ahmoray </p>
+            </div>
+       
+             </footer>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="libs/backendless.min.js"></script>
+      <script type="text/javascript" src="js/blog.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+      <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
+      
+      <script id="blogs-template" type="text/x-handlebars-template">
+          {{#each posts}}
+            <div class="blog post">
+                <h2 class="blog-post-title">{{title}}</h2>
+                <p class="blog-post-meta"> At {{format created}} by {{authorEmail}}</p>
+                <div>{{content}}</div>
+                <button class="btn btn-small  waves-effect waves-light red delete-post"><a href="index.html" class="white-text">Delete</a></button>
+                 <button class="btn btn-small  waves-effect waves-light red white-out-post">Check</button>
+            </div>
+      
+            {{/each}}
+    </script>
+    <script id="check-done-template" type="text/x-handlebars-template">
+                        <div class="white-text">
+                        <h4 class="blog-post-meta italic">This Todo-List has been Completed</h4>
+                        <button class="btn btn-small  waves-effect waves-light ppurple-in-post black-text"><a href="index.html" class="white-text">Uncheck</a></button>
+                        <button class="btn btn-small  waves-effect waves-light red delete-post"><a href="index.html" class="white-text">Delete</a></button>
+    </script>
     </body>
-</html>
+  </html>
