@@ -38,6 +38,10 @@ footer {
     color:#cc33ff;
 }
 
+#u {
+    color:#cc33ff;
+}
+
  .ahmi {
     color:#cc33ff;
     font-size: 30px;
@@ -70,9 +74,15 @@ footer {
     color:whitesmoke;
 }
 
+#u :hover {
+    background-color: black;
+    color:whitesmoke;
+}
+
 .ahmi:hover { 
     background-color: black;
     color:whitesmoke;
+    text-align: center;
 }
  header, main, footer {
       padding-left: 240px;
@@ -83,4 +93,3 @@ footer {
         padding-left: 0;
       }
     }
-          
