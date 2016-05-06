@@ -40,6 +40,11 @@ $(function () {
    $('.main-container').html(UncheckTemplate);
 });
 
+    $(document).on('click', '.delete-post', function () {
+        
+        Backendless.Persistence.of(Posts).remove("741BA7C9-44F8-D512-FFF7-EB5943684400");
+    });
+
 function Posts(args) {
     args = args || {};
     this.title = args.title || "";
