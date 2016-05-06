@@ -5,15 +5,17 @@ $(function () {
 
     Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
 
-  var postsCollection = Backendless.Persistence.of(Posts).find();
+  var postsCollection = Backendless.Persistence.of(Posts);
     
     console.log(postsCollection);
-    
-    var wrapper = {
-        posts: postsCollection.data
-        
+    var currentUser = Backendless.UserService.getCurrentUser();
+    if(currentUser !== null) {
+   
+        var everythingTasks = postsCollection.find();
+        var wrapper = {
+        posts: everythingTasks.data
     };
-    
+    }
     Handlebars.registerHelper('format', function (time) {
         return moment(time).format("dddd, MMMM Do YYYY");
     });
