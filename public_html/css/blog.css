@@ -2,9 +2,9 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    color:#000033;
+    color:#000000;
     font-family: 'PT Sans', sans-serif;
-    background-color: #000033;
+    background-color: #000000;
 }
 main {
     flex: 1 0 auto;

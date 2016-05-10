@@ -86,6 +86,8 @@ function userLoggedIn(user) {
     } else {
         userData  = user;
     }
+    
+    
     var welcomeScript = $('#welcome-template').html();
     var welcomeTemplate = Handlebars.compile(welcomeScript);
     var welcomeHTML = welcomeTemplate(userData);

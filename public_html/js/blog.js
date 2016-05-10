@@ -42,7 +42,7 @@ $(function () {
 
     $(document).on('click', '.delete-post', function () {
         
-        Backendless.Persistence.of(Posts).remove("741BA7C9-44F8-D512-FFF7-EB5943684400");
+        Backendless.Persistence.of(Posts).remove("8EADB136-471D-719F-FF0E-FA204546BA00");
     });
 
 function Posts(args) {
